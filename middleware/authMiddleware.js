@@ -18,6 +18,7 @@ export default async function authMiddleware(req, res, next) {
                 msg: "You are not authorized to access any resource"
             })
         }
+        console.log("################# Authorized ##################")
         next();
     }
     catch(err) {

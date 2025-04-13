@@ -4,7 +4,7 @@ import genPassPhrase from "../utils/dictionary.js"
 
 const prisma = new PrismaClient()
 
-export default async function genPassphrase(req,res) {
+export default async function createWallet(req,res) {
     try {
         const passphrase = genPassPhrase()
         const wallet = await prisma.wallet.create({

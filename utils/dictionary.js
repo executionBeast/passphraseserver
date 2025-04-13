@@ -22,7 +22,7 @@ export default function genPassPhrase() {
     return passphrase
 }
 
-console.log("Passphrase:", genPassPhrase())
+// console.log("Passphrase:", genPassPhrase())
 
 
 

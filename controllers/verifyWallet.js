@@ -4,8 +4,8 @@ const prisma = new PrismaClient()
 export default async function verifyWallet(req, res) {
     try {
         console.log("req body : ", req.body)
-        if(!req.body) {
-            return res.status(404).json({
+        if(!req.body.passphrase) {
+            return res.status(400).json({
                 msg: "Bad Request, No passphrase provided"
             })
         }
